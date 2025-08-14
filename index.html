@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Stylish Webpage</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      background: rgba(10, 210, 225, 0.95);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #2575fc;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to right, #a9ef26, #8adb1f);
+      color: #e95d5d;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideIn 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 700px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      animation: flipIn 1.5s ease-out;
+      border: 5px solid rgb(157, 11, 206);
+    }
+
+    .hero button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: rgb(182, 30, 224);
+      cursor: pointer;
+      transition: 0.3s;
+      animation: flipIn 1.5s ease-out;
+    }
+
+    .hero button:hover {
+      transform: scale(1.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #1ece1b;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #e23d3d;
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      from {transform: translateY(-50px); opacity:0;}
+      to {transform: translateY(0); opacity:1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0;}
+      to {opacity:1;}
+    }
+
+    @keyframes flipIn {
+      from {transform: rotateX(90deg); opacity:0;}
+      to {transform: rotateX(0); opacity:1;}
+    }
+
+    /* Responsive */
+    @media (max-width:768px){
+      nav ul {
+        display: none; /* optional: add mobile menu toggle */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container">
+      <div class="logo">MyPortfolio</div>
+      <ul>
+        <li><a href="#about">About🖊</a></li>
+        <li><a href="#contact">Contact📞</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero / About Section -->
+  <section class="hero" id="about">
+    <img src="img1.jpg" alt="My Photo">
+    <h1>Mohammad Saif Rakhangi💗</h1>
+    <p>Hello! I am Mohammad Saif Rakhangi✨, a passionate frontend developer learning and exploring modern web design. I love creating beautiful, responsive, and interactive webpages using HTML, CSS, and JavaScript. My goal is to make the web visually appealing and user-friendly for everyone.</p>
+    <button>Contact Me📞</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Mohammad Saif Rakhangi😍. All rights reserved.
+  </footer>
+
+</body>
+</html>
